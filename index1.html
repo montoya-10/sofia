@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Reyna Sofia</title>
+    <style>
+        body {
+            background-image: url(img/karol\ g.jpg);
+            /* Cambia 'ruta_del_fondo.jpg' por la URL de tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* También puedes ajustar otros estilos de la página aquí */
+        }
+
+        .question-container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        #myButtonYes {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #myButton {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 17%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Antes de dar click aqui abajo primero rresponde con un "si" o un "no", luego si te aparece una ventana emergente dale aceptar:</p>
+    <a href="index3.html">Ir a Página 2</a>
+
+
+    <div class="question-container">
+        <h1>¿quieres ser esa persona que me acompañe en los buenos y malos momentos?</h1>
+        <button id="myButtonYes" onclick="mostrarGracias()">Sí</button>
+        <button id="myButton" onclick="moverBoton()">No</button>
+
+    </div>
+
+    <script>
+        function mostrarGracias() {
+            alert("¡Gracias por tu respuesta mor!");
+        }
+
+        function moverBoton() {
+            var boton = document.getElementById("myButton");
+            var nuevaPosX = Math.random() * (window.innerWidth - boton.offsetWidth);
+            var nuevaPosY = Math.random() * (window.innerHeight - boton.offsetHeight);
+
+            boton.style.left = nuevaPosX + "px";
+            boton.style.top = nuevaPosY + "px";
+        }
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

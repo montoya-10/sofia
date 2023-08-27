@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url(img/karol\ g2.jpg);
+            /* Cambia 'fondo.jpg' por la URL de tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* También puedes ajustar otros estilos de la página aquí */
+        }
+
+        #gallery {
+            display: flex;
+            animation: slide 30s linear infinite;
+            /* Ajusta el tiempo de desplazamiento y el efecto */
+        }
+
+        .gallery-item {
+            width: 300px;
+            height: 400px;
+            margin: 0 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            max-height: 80%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Esta es la página 1. Haz clic en el enlace para ir a la página 2:</p>
+    <a href="index1.html">Ir a Página 2</a>
+
+
+    <div id="gallery">
+        <div class="gallery-item">
+            <h3>linda</h3>
+            <img src="img/so.jpeg" alt="Imagen 1">
+        </div>
+        <div class="gallery-item">
+            <h3>Hermosa</h3>
+            <img src="img/so1.jpeg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item">
+            <h3>cariñosa</h3>
+            <img src="img/so3.jpeg" alt="Imagen 3">
+        </div>
+
+        <div class="gallery-item">
+            <h3>Eres mi Reina</h3>
+            <img src="img/so4.jpeg" alt="Imagen 1">
+        </div>
+        <div class="gallery-item">
+            <h3>espero te guste</h3>
+            <img src="img/so5.jpeg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item">
+            <h3>Te amo</h3>
+            <img src="img/so6.jpeg" alt="Imagen 3">
+        </div>
+    </div>
+</body>
+
+</html>
